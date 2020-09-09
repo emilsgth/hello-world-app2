@@ -36,7 +36,7 @@ globalEnvironments:
   enabled: true
   environments:
   - name: ENVIRONMENT
-    value: qa
+    value: dev
   
 
 resources: {}
