@@ -1,0 +1,6 @@
+credentials = "common-service-account.json"
+google_bucket_name = "fuchicorp-emil-343"
+deployment_name = "hello_world"
+google_project_id = "long-centaur-286100"
+google_domain_name = "emilbek.com"
+deployment_environment = "stage"
