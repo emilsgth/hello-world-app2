@@ -1,35 +1,46 @@
 # Default values for hello-world.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-replicaCount: 2
+
+replicaCount: 5
+
 image:
   repository: ${deployment_image}
   pullPolicy: IfNotPresent
+
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
+
+
+
 service:
   type: ClusterIP
   port: 80
+
+
 ingress:
   enabled: true
   annotations: 
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod
-    # kubernetes.io/tls-acme: "true"
   hosts:
     - host: ${deployment_endpoint}
-      paths: 
+      paths:
       - /
-  tls: 
-    - secretName: hello-beckinc
-      hosts:
-        - ${deployment_endpoint}
+  tls:
+  - secretName: hello-fuchicorp
+    hosts:
+    - ${deployment_endpoint}
+
+
 globalEnvironments:
   enabled: true
   environments:
   - name: ENVIRONMENT
-    value: dev 
+    value: dev
+
+
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
@@ -41,6 +52,9 @@ resources: {}
   # requests:
   #   cpu: 100m
   #   memory: 128Mi
+
 nodeSelector: {}
+
 tolerations: []
+
 affinity: {}
