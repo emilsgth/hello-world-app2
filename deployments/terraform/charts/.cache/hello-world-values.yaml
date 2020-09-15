@@ -23,14 +23,14 @@ ingress:
      cert-manager.io/cluster-issuer: letsencrypt-prod
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: hello.emilbek.com
+    - host: dev.hello.emilbek.com
       paths: 
       - /
 
   tls: 
   - secretName: hello-fuchicorp
     hosts:
-      - hello.emilbek.com
+      - dev.hello.emilbek.com
 
 globalEnvironments:
   enabled: true

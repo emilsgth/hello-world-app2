@@ -22,6 +22,8 @@ override.tf.json
 *_override.tf.json
 deployments/terraform/hello-world/fuchicorp-service-account.json
 deployments/terraform/backend.tf
+hello-world-app/deployments/terraform/hello.tfvars
+hello-world-app/deployments/terraform/common-service-account.json
 # Include override files you do wish to add to version control using negated pattern
 #
 # !example_override.tf
