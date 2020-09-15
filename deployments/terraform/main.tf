@@ -5,16 +5,10 @@ module "academy-deploy" {
   deployment_environment = "${var.deployment_environment}"
   deployment_endpoint    = "${lookup(var.deployment_endpoint, "${var.deployment_environment}")}.${var.google_domain_name}"
   deployment_path        = "hello-world"
-<<<<<<< HEAD
-  template_custom_vars  = {
-    deployment_image = "${var.deployment_image}"
-   }
-=======
 
   template_custom_vars  = {     
     deployment_image     = "${var.deployment_image}"
   }
->>>>>>> c6f52c5c23a7c5ff57c546355fc91edf3209cee6
 }
 
 
