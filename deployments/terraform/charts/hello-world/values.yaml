@@ -5,7 +5,7 @@
 replicaCount: 5
 
 image:
-  repository: ${deployment_image}
+  repository: docker.emilbek.com/hello-world-job-stage:56c11ad
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
